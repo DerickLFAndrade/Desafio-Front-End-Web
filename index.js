@@ -57,12 +57,15 @@ function consumo() {
                 desc.innerHTML = 'Descrição padrão para todos os cards, pois em alguns produtos a descrição é muito grande, deixando o design ruim'
                 cardBody.appendChild(desc)
 
-                let price = document.createElement('h4')
-                price.className = 'card-text'
-                price.style.fontSize = '15px'
-                price.style.fontWeight = 'bold'
-                price.innerHTML = `R$ ${item.price}`
-                cardBody.appendChild(price)
+                let priceC = document.createElement('h4')
+                priceC.className = 'card-text'
+                priceC.style.fontSize = '15px'
+                priceC.style.fontWeight = 'bold'
+                    priceC.innerHTML = `${item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+                    cardBody.appendChild(priceC)
+                    
+                   
+                    
 
 
 
@@ -95,6 +98,19 @@ function consumo() {
                         input.addEventListener('input', () => {
                             
                             inps = input.value.toUpperCase();
+                        })
+                        input.addEventListener('keydown', (e) => {
+                            if(e.key === 'Enter') {
+                                let index;
+                                index = filtroNome.indexOf(inps)
+
+                                if (index == -1) {
+
+                                    card.style.display = 'none'
+                                } else {
+                                    card.style.display = 'block'
+                                }
+                            }
                         })
                         icoP.addEventListener('click', () => {
                             let index;
