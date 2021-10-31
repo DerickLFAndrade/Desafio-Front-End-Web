@@ -1,13 +1,15 @@
 
 function consumo() {
+     
     fetch("https://raw.githubusercontent.com/owInteractive/desafio-frontend-2020/master/produtos.json").then(response => {
-        
+
         return response.json()
-        
+
     }).then(body => {
+        
         const listarProdutos = () => {
-            let ar = body.map(item => {
-                item.name
+                body.map( item => {
+                
                 const table = document.querySelector('[data-table]')
                 let card = document.createElement('div')
                 card.className = 'card'
@@ -82,18 +84,50 @@ function consumo() {
                 table.appendChild(card)
 
 
+                    const armazenarNome = () => {
+                        const input = document.querySelector('[data-pesquisa]')
+                        const icoP = document.querySelector('[data-ico-p]')
+                       
+                        let filtroNome;
+                        filtroNome = item.name.toUpperCase();
+                        let inps;
+                      
+                        input.addEventListener('input', () => {
+                            
+                            inps = input.value.toUpperCase();
+                        })
+                        icoP.addEventListener('click', () => {
+                            let index;
+                            index = filtroNome.indexOf(inps)
 
+                            if (index == -1) {
+
+                                card.style.display = 'none'
+                            } else {
+                                card.style.display = 'block'
+                            }
+                        })
+
+
+                    }
+                    armazenarNome();
             })
 
-            
+           
+           
+
+
         }
-        
+
+       
+       
+       
         const adicionarCarrinho = () => {
-            
+
         }
 
         listarProdutos();
-   
+
 
     });
 }
