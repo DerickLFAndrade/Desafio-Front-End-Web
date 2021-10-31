@@ -1,5 +1,7 @@
 @media screen and (max-width: 900px) {
-
+body {
+    background: rgb(121, 120, 120);
+}
 .nav-bar {
     height: 50px;
     
@@ -14,12 +16,12 @@
 }
 
 .logo-1 {
-    color: rgb(153, 153, 153);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 25px;
 }
 .logo-2 {
-    color: rgb(170, 94, 241);
+    color: rgb(193, 145, 238);
     font-weight: bold;
     font-size: 25px;
 }
@@ -28,7 +30,7 @@
     justify-content: center;
     align-items: center;
     font-size: 13px;
-    color: rgb(153, 153, 153);
+    color: rgb(255, 255, 255);
     font-weight: bold;
    
 }
@@ -85,7 +87,7 @@
 
 }
 .inp-pesquisa::placeholder {
-    color: rgb(111, 109, 109);
+    color: rgb(197, 195, 195);
     font-weight: bold;
 }
 .inp-pesquisa {
@@ -98,6 +100,7 @@
    border-bottom: 2px solid rgb(206, 206, 206);
    border-radius: 5px;
    outline: 0;
+   color: rgb(226, 226, 226);
     
 }
 .ico-pesq {
@@ -122,6 +125,9 @@
     margin-left: -25px;
 
 }
+.card {
+    box-shadow: 0px 0px 15px black;
+}
 .button {
  color: blueviolet;
 }
@@ -140,7 +146,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 50px;
-    background: #ccc;
+    background: #434343;
     bottom: 0;
     
 }
