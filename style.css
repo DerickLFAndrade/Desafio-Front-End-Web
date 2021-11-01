@@ -129,7 +129,8 @@
     margin-top: 50px;
     margin-bottom: 50px;
     height: 70px;
-    border: 2px solid rgba(160, 172, 206, 0.4);
+    border: 2px solid rgba(208, 217, 241, 0.1);
+    border-radius: 5px;
     
     margin-left: 10px;;
     
@@ -148,8 +149,8 @@
 
 }
 .inp-pesquisa::placeholder {
-    color: rgb(111, 109, 109);
-    font-weight: bold;
+    color: rgb(199, 198, 198);
+    font-family: 'Times New Roman', Times, serif;
 }
 .inp-pesquisa {
     text-indent: 10px;
@@ -161,6 +162,9 @@
    border-bottom: 2px solid rgb(206, 206, 206);
    border-radius: 5px;
    outline: 0;
+   color: #615f5f;
+   font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 .ico-pesq {
@@ -339,7 +343,8 @@ footer {
     margin-top: 50px;
     margin-bottom: 50px;
     height: 70px;
-    border: 2px solid rgba(160, 172, 206, 0.4);
+     border: 2px solid rgba(208, 217, 241, 0.1);
+    border-radius: 5px;
     
 }
 .text-lab {
@@ -355,8 +360,8 @@ footer {
 
 }
 .inp-pesquisa::placeholder {
-    color: rgb(111, 109, 109);
-    font-weight: bold;
+    color: rgb(199, 198, 198);
+    font-family: 'Times New Roman', Times, serif;
 }
 .inp-pesquisa {
     text-indent: 10px;
@@ -368,6 +373,9 @@ footer {
    border-bottom: 2px solid rgb(206, 206, 206);
    border-radius: 5px;
    outline: 0;
+   color: #615f5f;
+   font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 .ico-pesq {
