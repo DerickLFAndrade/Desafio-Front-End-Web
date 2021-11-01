@@ -260,6 +260,7 @@ footer {
     color: rgb(75, 75, 75);
      font-weight: bold;
 }
+
 .itens-add {
     display: flex;
     height: 50px;
@@ -535,72 +536,180 @@ footer {
     
 }
 
+
 /*modal cart */
 .modal-cart {
     display: flex;
     justify-content: center;
     align-items: center;
-  
     width: 100vw;
     height: 500px;
    margin-top: -280px;
    background: white;
     z-index: 5000;
     box-shadow: 0px -5px 10px -5px rgb(206, 206, 214);
+    padding: 100px;
     
     
     
 }
-.tab-cart {
-    margin-top: 50px;
+
+.it-tab-1 {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
-    height: 100px;
-}
-.it-tab-c {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     color: rgb(75, 75, 75);
      font-weight: bold;
+     
 }
-.itens-add {
+.cont-text-prod {
     display: flex;
-    height: 100px;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
 }
-.it-tab-d {
+.text-prod {
+    margin-left: 150px;
+}
+
+.cont-garbage-cart {
+border-top: 2px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  margin-left: 80px;
+   margin-top: 10px;
+   width: 70vw;
+   padding: 20px;
+}
+.cont-text-garbage {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 12px;
-    margin-left: 230px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+   
 }
 
-.soma-itens {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    margin-top: -00px;
-    height: 150px;
-    border-bottom: 2px solid #ccc;
-   
-   width: 100vw;
-}
-.it-tab-f {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: column;
-  font-size: 10px;
-}
-.finalizar {
+.it-tab-2 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 12px;
+    margin-left: 160px;
+}
+
+.it-tab-3 {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: 170px
+}
+
+.it-tab-4 {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: 160px
+}
+.bot-add-cart {
+    border: 2px solid #cecdcd;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    height: 25px;
+    font-weight: bold;
+}
+.bot-menos, .bot-mais{
+    color: #cecdcd;;
+    border: 2px solid #cecdcd;
     
 }
 
+
+.soma-itens {
+border-top: 2px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  margin-left: 80px;
+   margin-top: 10px;
+   width: 70vw;
+   padding: 20px;
+}
+.cont-soma-1-2 {
+    margin-left: 650px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.it-soma-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.it-soma-2 {
+  display: flex;
+  justify-content: space-between;
+ width: 270px;
+font-size: 10px;
+}
+.it-soma-1 h6, .it-soma-2 h6 {
+    font-size: 10px;
+    font-weight: bold;
+}
+.it-soma-1 h5 {
+    color: rgb(183, 43, 226);
+    font-size: 15px;
+}
+.it-soma-2-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.finalizar {
+  border-top: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  margin-left: 80px;
+   margin-top: 10px;
+   width: 70vw;
+   padding: 50px;
+    
+}
+.limpa-carrinho {
+    color: #ccc;
+}
+
+.bot-ct-cp, .bot-cc-cp {
+    
+    font-size: 12px;
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    color: #666565;
+
+}
+.bot-ct-cp:hover, .bot-cc-cp:hover {
+     background: blueviolet;
+    color: white;
+}
     
 }
