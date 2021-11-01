@@ -2,6 +2,7 @@
 
 .nav-bar {
     height: 50px;
+    
 }
 .nav-ul {
     list-style-type: none;
@@ -223,18 +224,97 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    background: rgb(232, 231, 231);
+    height: 70px;
+    background: #ccc;
     bottom: 0;
+    
     
 }
 
 
+/*modal cart */
+.modal-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100vw;
+    height: 500px;
+   margin-top: -180px;
+   background: white;
+    z-index: 5000;
+    box-shadow: 0px -5px 10px -5px rgb(206, 206, 214);
+    
+    font-size: 10px;
+    
 }
+.tab-cart {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    height: 50px;
+}
+.it-tab-c {
+    color: rgb(75, 75, 75);
+     font-weight: bold;
+}
+.itens-add {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+.it-tab-d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 8px;
+    margin-left: 30px;
+}
+
+.soma-itens {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-top: -00px;
+    height: 150px;
+    border-bottom: 2px solid #ccc;
+   
+   width: 100vw;
+}
+.it-tab-f {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 10px;
+}
+.finalizar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+}
+
+
+
+
+
+
+
 @media screen and (min-width: 901px) {
  
     .nav-bar {
+    padding: 10px;
     height: 50px;
+    margin-bottom: 10px;
+    
+   
      
 }
 .nav-ul {
@@ -449,12 +529,78 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 70px;
     background: #ccc;
     bottom: 0;
     
 }
 
+/*modal cart */
+.modal-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100vw;
+    height: 500px;
+   margin-top: -280px;
+   background: white;
+    z-index: 5000;
+    box-shadow: 0px -5px 10px -5px rgb(206, 206, 214);
+    
+    
+    
+}
+.tab-cart {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    height: 100px;
+}
+.it-tab-c {
+    color: rgb(75, 75, 75);
+     font-weight: bold;
+}
+.itens-add {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+.it-tab-d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: 230px;
+}
+
+.soma-itens {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-top: -00px;
+    height: 150px;
+    border-bottom: 2px solid #ccc;
+   
+   width: 100vw;
+}
+.it-tab-f {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 10px;
+}
+.finalizar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
 
     
 }

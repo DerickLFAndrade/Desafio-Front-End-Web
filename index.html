@@ -20,7 +20,7 @@
                 <li class="lista-nav"><span class="logo-1">Mkt</span><span class="logo-2">Place</span></li>
                 <li class="lista-nav" id="cont-li-cart">
                     <span>Produtos</span>
-                    <img class="cart" src="ico-shopping-cart.svg" alt="">
+                    <img data-ico-cart class="cart" src="ico-shopping-cart.svg" alt="">
                 </li>
 
             </ul>
@@ -77,79 +77,79 @@
                 </span>
 
 
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval=0>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+                <!--MODAL CARRINHO-->
+                <section class="modal-cart" style="display: none;" data-cart>
+                    
+                    <section class="tab-cart" data-tab-cart>
+                      <span class="it-tab-c">PROUTOS</span>
+                      <span class="it-tab-c">QUANTIDADE</span>
+                      <span class="it-tab-c">VALOR UNIÁRIO</span>
+                      <span class="it-tab-c">TOTAL</span>
+                    </section>
+                   
 
-                    <div class="logo-p-2">
-                        <span class="cont-text">
-                            <h1>Notebooks</h1>
-                            <h3>As melhores ofertas</h3>
+                    <section class="itens-add">
+
+                        <span class="it-tab-d">
+                            <img width="20px" src="ico-garbage.svg" alt="">
+                            <p>Categoria</p>
                         </span>
-                    </div>
 
-                </div>
-                <div class="carousel-item">
-                    <div class="logo-p">
-                        <span class="cont-text">
-                            <h1>Notebooks</h1>
-                            <h3>As melhores ofertas</h3>
+                        <span class="it-tab-d"><button>-00+</button></span>
+
+                        <span class="it-tab-d">
+                            <p><b>R$ 0,00</b> à vista</p>
+                            <p>ou 10x de <b>R$ 0,00</b></p>
                         </span>
-                    </div>
-                </div>
 
-            </div>
+                        <span class="it-tab-d">
+                            <P><b>R$ 0,00</b>  à vista</P>
+                            <p>ou 10x de <b>R$ 0,00</b></p>
+                        </span>
 
+                    </section>
+                   
+                    <section class="soma-itens">
 
-            <span class="cont-btn">
+                        <div class="it-tab-f">
+                            
+                            <span>TOTAL À VISTA</span>
+                            <span>R$0</span>
+                        </div>
+                        
+                        <div class="it-tab-f">
+                            <span>TOTAL PARCELADO</span>
+                            <span>em até 12x sem juros</span>
+                        </div>
+                        
+                        </section>
 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
-                    >
-
-                    <div class="bol-prev" data-bol-prev>
-                        <button id="bot-prev" class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        </button>
-                    </div>
-
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"
-                    >
-
-
-
-
-                    <div class="bol-nex" data-bol-nex>
-                        <button id="bot-nex" class="carousel-control-next" type="button"
-                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        </button>
-                    </div>
-
-
-
-                </a>
-
-
-
-
-
-            </span>
-
-        </div> -->
+                        <section class="finalizar">
+                        
+                            <div class="it-tab-g">
+                                <span><img width="20px" src="ico-garbage.svg" alt="">
+                                Limpar carrinho</span>
+                            
+                            </div>
+                        
+                            <div class="it-tab-g">
+                                <button>Continuar comprando</button>
+                                <button>Concluir compra</button>
+                            </div>
+                        
+                        </section>
 
 
-        <!-- <div class="logo-p" class="d-block w-100">
-            <span class="cont-text">
-                <h1>Notebooks</h1>
-                <h3>As melhores ofertas</h3>
-            </span>
-        </div> -->
+                </section>
+
+                <!--MODAL CARRINHO-->
+
     </header>
 
-    <div class="cont-m">
+    <div class="cont-m" data-cont-p>
         <section class="barra-pesquisa">
 
-            <span class="cont-bar"><input type="text" class="inp-pesquisa" data-pesquisa
+            <span  class="cont-bar"><input type="text" class="inp-pesquisa" data-pesquisa
                     placeholder="Encontre seu produto">
                 <span class="ico-pesq" data-ico-p><img class="ico-p-im" src="ico-magnifying-glass.svg" alt=""
                         width="20px"></span>
@@ -165,6 +165,9 @@
     <footer>
         <span class="logo-1">Mkt</span><span class="logo-2">Place</span>
     </footer>
+
+
+   
 
     <script src="index.js"></script>
   
