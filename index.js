@@ -23,13 +23,12 @@ function consumo() {
 
                     card.style.marginLeft = '50px'
                     card.style.marginTop = '50px'
-                    card.style.width = '300px'
-                    card.style.height = '500px'
+                   
 
                     let cardImg = document.createElement('img')
                     cardImg.className = 'card-img-top'
                     cardImg.src = item.imageUrl
-                    cardImg.style.width = '200px'
+                    
 
 
 
@@ -57,7 +56,7 @@ function consumo() {
                     desc.className = 'card-text'
                     desc.style.fontSize = '8px'
                     desc.style.color = '#808080'
-                    desc.innerHTML = 'Descrição padrão para todos os cards, pois em alguns produtos a descrição é muito grande, deixando o design ruim'
+                    desc.innerHTML = 'Descrição padrão para todos os produtos'
                     cardBody.appendChild(desc)
 
                     let priceC = document.createElement('h4')
