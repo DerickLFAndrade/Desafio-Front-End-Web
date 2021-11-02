@@ -14,13 +14,18 @@
 </head>
 
 <body>
+    
+    
     <header>
-        <nav class="nav-bar">
+        <div data-nav-fk style="height: 70px; display: none;" ></div>
+        <nav class="nav-bar" data-nav>
             <ul class="nav-ul">
-                <li class="lista-nav"><span class="logo-1">Mkt</span><span class="logo-2">Place</span></li>
+                <li class="lista-nav"><span class="logo-1" data-logo-1>Mkt</span><span class="logo-2">Place</span></li>
                 <li class="lista-nav" id="cont-li-cart">
                     <span>Produtos</span>
+                    
                     <img data-ico-cart class="cart" src="ico-shopping-cart.svg" alt="">
+                    <span style="display: none; color: red; margin-top: 5px; font-size: 16px; margin-left: 5px;" data-contador-cart  >0</span>
                 </li>
 
             </ul>
@@ -78,95 +83,99 @@
 
 
             <!--MODAL CARRINHO-->
-            <section class="modal-cart" style="display: none;" data-cart>
 
-                <section class="container-modal">
-                    <h2 style="display: none;" class="msg-cart">Não há itens no carrinho!</h2>
-                    <!--Produto adicionado (categoria e nome do produto)-->
-                    <section class="it-tab-1" style="display: block;">
-                        <span class="cont-text-prod">
-                            <h5 class="text-prod">Produtos</h5>
-                            <h5 class="text-prod">Quantidade</h5>
-                            <h5 class="text-prod">Valor unitário</h5>
-                            <h5 class="text-prod">Total</h5>
-                        </span>
-                        <section class="cont-garbage-cart" >
-                    
-                            <span class="cont-text-garbage">
-                                <span style="color: rgb(183, 43, 226) ;">Categoria</span>
-                                <span class="cont-ico-l">
-                                    <img width="12px" src="ico-garbage.svg" alt="">
-                                    <span>Nome produto</span>
-                    
-                                </span>
+            <div class="cont-mod-princ" style="display: none;" data-cart>
+                
+                <section class="modal-cart"  >
+                
+                
+                
+                <div class="cont-msg">
+                    <h2 data-msg style="display: flex;" class="msg-cart">Não há itens no carrinho!</h2>
+                </div>
+                      
+                
+                        <!--Produto adicionado (categoria e nome do produto)-->
+                        <section class="it-tab-1">
+                            <span class="cont-text-prod" style="display: none;" data-desc-itens>
+                                <h5 class="text-prod">Produtos</h5>
+                                <h5 class="text-prod">Quantidade</h5>
+                                <h5 class="text-prod">Valor unitário</h5>
+                                <h5 class="text-prod">Total</h5>
                             </span>
-                            <!--Quantidade adicionada e boão de adicionar mais ou tirar-->
-                            <section class="it-tab-2">
-                                <span class="bot-add-cart">
-                                    <button class="bot-menos">-</button>
-                                    <span>0</span>
-                                    <button class="bot-mais">+</button>
+                
+                            <section data-carrinho-produto></section>
+                            <section class="cont-garbage-cart" data-prod-clone  style="display: none;">
+                
+                                <span class="cont-text-garbage" data-produto-desc>
+                                    <span  data-categoria style="color: rgb(183, 43, 226) ;"></span>
+                                    <span class="cont-ico-l">
+                                        <img width="12px" src="ico-garbage.svg" alt="">
+                                        <span class="nome-prod" data-nome-prod> </span>
+                
+                                    </span>
+                                </span>
+                                <!--Quantidade adicionada e boão de adicionar mais ou tirar-->
+                                <section class="it-tab-2">
+                                    <span class="bot-add-cart">
+                                        <button class="bot-menos">-</button>
+                                        <span data-cont-cart-2>0</span>
+                                        <button class="bot-mais">+</button>
+                                    </span>
+                                </section>
+                                <!--Valor unitário-->
+                                <span class="it-tab-3">
+                                    <span data-valor-un style="width: 100px;"><b>R$ 0,00</b> à vista</span>
+                                    <p data-10x-1 >ou 10x <b>R$ 0,00</b></p>
+                                </span>
+                                <!--Valor Total-->
+                                <span class="it-tab-4">
+                                    <span data-valor-tot style="width: 100px;"><b>R$ 0,00</b> à vista</span>
+                                    <p data-10x-2>ou 10x <b>R$ 0,00</b></p>
                                 </span>
                             </section>
-                            <!--Valor unitário-->
-                            <span class="it-tab-3">
-                                <span style="width: 100px;"><b>R$ 0,00</b> à vista</span>
-                                <p>ou 10x <b>R$ 0,00</b></p>
-                            </span>
-                            <!--Valor Total-->
-                            <span class="it-tab-4">
-                                <span style="width: 100px;"><b>R$ 0,00</b> à vista</span>
-                                <p>ou 10x <b>R$ 0,00</b></p>
-                            </span>
-                        </section>
-                        <!--Soma dos itens-->
-                        <section class="soma-itens">
-                            <span class="cont-soma-1-2">
-                                <div class="it-soma-1">
-                                    <span>TOTAL À VISTA</span>
-                                    <h5>R$ 0,00</h5>
-                                </div>
-                                <div class="it-soma-2">
-                                    <span>TOTAL PARCELADO</span>
-                                    <span class="it-soma-2-cont">
-                                        <span>até <b>12x R$ 0,00</b></span>
-                                        <span>(Total R$ 0,00)</span>
-                                    </span>
-                                </div>
-                            </span>
-                        </section>
-                        <section class="finalizar ">
-                    
-                            <div class="limpa-carrinho">
-                                <img width="12px" src="ico-garbage.svg" alt="">
-                                <span>Limpar carrinho</span>
-                    
-                            </div>
-                    
-                            <div class="bot-fz-compra">
-                                <button class="bot-ct-cp">Continuar comprando</button>
-                                <button class="bot-cc-cp">Concluir compra</button>
-                            </div>
-                    
-                        </section>
-                    
-                </section>
-
-
-
-                </section>
-
-
-
-
-
+                            <!--Soma dos itens-->
+                            <section data-soma class="soma-itens" style="display: none;">
+                                <span class="cont-soma-1-2">
+                                    <div class="it-soma-1">
+                                        <span >TOTAL À VISTA</span>
+                                        <h5 data-avista>R$ 0,00</h5>
+                                    </div>
+                                    <div class="it-soma-2">
+                                        <span>TOTAL PARCELADO</span>
+                                        <span class="it-soma-2-cont">
+                                            <span data-parcelado>até <b>10x R$ 0,00</b></span>
+                                            <span data-total-pag >(Total R$ 0,00)</span>
+                                        </span>
+                                    </div>
+                                </span>
+                            </section>
+                            <section data-fim-cart class="finalizar " style="display: none;">
                 
-
-            </section>
+                                <div class="limpa-carrinho">
+                                    <img width="12px" src="ico-garbage.svg" alt="">
+                                    <span>Limpar carrinho</span>
+                
+                                </div>
+                
+                                <div class="bot-fz-compra">
+                                    <button data-bot-cp class="bot-ct-cp">Continuar comprando</button>
+                                    <button class="bot-cc-cp">Concluir compra</button>
+                                </div>
+                
+                            </section>
+                
+                
+                
+                    </section>
+                
+                </section>
+            </div>
 
             <!--MODAL CARRINHO-->
 
     </header>
+   
 
     <div class="cont-m" data-cont-p>
         <section class="barra-pesquisa">
@@ -184,6 +193,8 @@
         </div>
     </div>
 
+
+    
     <footer>
         <span class="logo-1">Mkt</span><span class="logo-2">Place</span>
     </footer>
