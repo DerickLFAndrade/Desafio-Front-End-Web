@@ -230,7 +230,7 @@ function consumo() {
                        carrinho.appendChild(novoProd);
                      
                      
-                        
+                       
                        
                     })
                     const bot_cont_cp = document.querySelector('[data-bot-cp]');
@@ -256,6 +256,13 @@ function consumo() {
                 criarCard();
                 pesquisar();
 
+            
+
+
+            })
+            const botLixo = document.querySelector('[data-lixo]')
+            botLixo.addEventListener('click', () => {
+                alert('Deseja remover os itens?')
 
             })
 
