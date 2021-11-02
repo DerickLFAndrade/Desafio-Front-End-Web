@@ -753,10 +753,14 @@ footer {
     align-items: center;
     margin-bottom: 300px;
     margin-top: -200px;
+    background: black;
+    
+   
     
     
 }
 .msg-cart {
+    margin-top: -500px;
     color: #808080;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
@@ -768,8 +772,9 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 500px;
   width: 100vw;
-   z-index: 15000;
+   z-index: 10000;
    background: #fff;
     
     box-shadow: 0px -5px 10px -5px rgb(206, 206, 214);
