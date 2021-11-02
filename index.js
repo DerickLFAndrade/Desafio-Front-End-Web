@@ -15,6 +15,7 @@ function consumo() {
                 const table = document.querySelector('[data-table]');
                 const card = document.createElement('div');
                 const button = document.createElement('button');
+                input.focus();
                 const criarCard = () => {
                    
                    
