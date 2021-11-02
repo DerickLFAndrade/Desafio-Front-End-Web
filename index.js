@@ -279,7 +279,7 @@ function consumo() {
 
                     if (scrollY > 310) {
                         navFk.style.display = '';
-                        contador_cart.style.color = '#fff'
+                        contador_cart.style.color = 'rgb(127, 255, 0)'
                         nav.classList.add('anima');
                         nav.style.position = 'fixed';
                         nav.style.background = 'rgba(0, 0, 0, 0.4)';
@@ -287,7 +287,7 @@ function consumo() {
                         logo1.style.color = 'white';
                     } else {
                         logo1.style.color = 'rgb(153, 153, 153)';
-                        contador_cart.style.color = 'red'
+                        contador_cart.style.color = 'rgb(250, 35, 35)';
                         nav.style.height = '70px';
                         navFk.style.display = 'none';
                         nav.classList.remove('anima');
