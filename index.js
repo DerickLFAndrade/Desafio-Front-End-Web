@@ -171,65 +171,70 @@ function consumo() {
                     let quantCarInt = 0;
 
                     button.addEventListener('click', () => {
-                        descItens.style.display = ''
-                        msg.style.display = 'none';
-                        soma.style.display = '';
-                        fimCart.style.display = '';
-                        contador_cart.style.display = ''
-                        
-                        const categoria = novoProd.querySelector('[data-categoria]'); //1°
-                        const nomeProd = novoProd.querySelector('[data-nome-prod]'); //2°
-                        const contCart = novoProd.querySelector('[data-cont-cart-2]'); //3°
-                        const valorUni = novoProd.querySelector('[data-valor-un]'); //4°
-                        const dividido1 = novoProd.querySelector('[data-10x-1]'); //5°
-                        const valorTot = novoProd.querySelector('[data-valor-tot]');//6°
-                        const dividido2 = novoProd.querySelector('[data-10x-2]'); //7°
-                       
+                        let conf = confirm(`Deseja adicionar ${item.name} em seu carrinho?`)
 
-                        const avista = document.querySelector('[data-avista]')//8°
-                        const parcelado = document.querySelector('[data-parcelado]')
-                        const totalCartao = document.querySelector('[data-total-pag]')
+                        if(conf == true) {
+                            descItens.style.display = ''
+                            msg.style.display = 'none';
+                            soma.style.display = '';
+                            fimCart.style.display = '';
+                            contador_cart.style.display = ''
 
-                        categoria.innerHTML = item.category;
-                       nomeProd.innerHTML = item.name;
-
-                        //contador externo total
-                        contador_cart.innerHTML = quantCar + 1;
-                        quantCar++;
-
-                       //quantidade no carrinho (botão interno)
-                       contCart.innerHTML = quantCarInt + 1;
-                        quantCarInt++;
+                            const categoria = novoProd.querySelector('[data-categoria]'); //1°
+                            const nomeProd = novoProd.querySelector('[data-nome-prod]'); //2°
+                            const contCart = novoProd.querySelector('[data-cont-cart-2]'); //3°
+                            const valorUni = novoProd.querySelector('[data-valor-un]'); //4°
+                            const dividido1 = novoProd.querySelector('[data-10x-1]'); //5°
+                            const valorTot = novoProd.querySelector('[data-valor-tot]');//6°
+                            const dividido2 = novoProd.querySelector('[data-10x-2]'); //7°
 
 
-                       //valor unitário
-                        valorUni.innerHTML = (item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                            const avista = document.querySelector('[data-avista]')//8°
+                            const parcelado = document.querySelector('[data-parcelado]')
+                            const totalCartao = document.querySelector('[data-total-pag]')
 
-                        //valor dividido 1
-                        dividido1.innerHTML = `10X ${(item.price / 10).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`;
+                            categoria.innerHTML = item.category;
+                            nomeProd.innerHTML = item.name;
 
-                       
+                            //contador externo total
+                            contador_cart.innerHTML = quantCar + 1;
+                            quantCar++;
 
-                        //valor total
-                       valorTot.innerHTML = (item.price * quantCarInt).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-                        //valor dividido 1
-                        dividido2.innerHTML = `10X ${((item.price * quantCarInt ) / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+                            //quantidade no carrinho (botão interno)
+                            contCart.innerHTML = quantCarInt + 1;
+                            quantCarInt++;
 
-                        SomaTotal += item.price;    
-                    
-                        //pagamento total à vista
-                        avista.innerHTML = SomaTotal.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'});
 
-                        //pagamento total parcelado
-                        parcelado.innerHTML = `10x de${(SomaTotal/10).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`;
+                            //valor unitário
+                            valorUni.innerHTML = (item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-                        //pagamento total 
-                        totalCartao.innerHTML = `(${SomaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })})`;
+                            //valor dividido 1
+                            dividido1.innerHTML = `10X ${(item.price / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
 
-                        
-                       carrinho.appendChild(novoProd);
-                     
-                     
+
+
+                            //valor total
+                            valorTot.innerHTML = (item.price * quantCarInt).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                            //valor dividido 1
+                            dividido2.innerHTML = `10X ${((item.price * quantCarInt) / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+
+                            SomaTotal += item.price;
+
+                            //pagamento total à vista
+                            avista.innerHTML = SomaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+                            //pagamento total parcelado
+                            parcelado.innerHTML = `10x de${(SomaTotal / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+
+                            //pagamento total 
+                            totalCartao.innerHTML = `(${SomaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })})`;
+
+
+                            carrinho.appendChild(novoProd);
+
+
+
+                        }
                        
                        
                     })
