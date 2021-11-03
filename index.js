@@ -301,7 +301,7 @@ function consumo() {
                             avista.innerHTML = SomaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
                             //pagamento total parcelado
-                            parcelado.innerHTML = `10x de${(SomaTotal / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+                            parcelado.innerHTML = `10x de ${(SomaTotal / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
 
                             //pagamento total 
                             totalCartao.innerHTML = `(${SomaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })})`;
