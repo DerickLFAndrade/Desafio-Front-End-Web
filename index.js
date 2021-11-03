@@ -1,7 +1,7 @@
 
 function consumo() {
-   
-    const ConcluirCadastro = () =>{
+
+    const ConcluirCadastro = () => {
         const API_CEP = () => {
             const cep = document.querySelector('[data-cep]');
 
@@ -47,24 +47,24 @@ function consumo() {
         form.addEventListener('submit', (e) => {
             const cont_msg = document.querySelector('[ data-msg-mod]')
             e.preventDefault();
-            if(validador == false) {
-                form.style.display = 'none'
-                
+            if (validador == false) {
+
                 cont_msg.style.display = 'block';
                 validador = true;
             }
-         
 
-            
+
+
+
         })
 
 
     }
     ConcluirCadastro();
-    
- 
 
-    
+
+
+
 
     fetch("https://raw.githubusercontent.com/owInteractive/desafio-frontend-2020/master/produtos.json").then(response => {
 
@@ -72,12 +72,12 @@ function consumo() {
 
     }).then(body => {
         let index;
-     
+
         let contador_cart = document.querySelector('[data-contador-cart]');
 
-       
+
         const listarProdutos = () => {
-           
+
             let quantCar = 0;
             let SomaTotal = 0;
             body.map(item => {
@@ -203,13 +203,13 @@ function consumo() {
 
                 }
 
-                const adicionarCarrinho = () => {  
+                const adicionarCarrinho = () => {
                     const cont_p = document.querySelector('[data-cont-p]');
                     const ico_cart = document.querySelector('[data-ico-cart]');
                     const cart_mod = document.querySelector('[data-cart]');
-                    
-                    
-                   const msg = document.querySelector('[data-msg]')
+
+
+                    const msg = document.querySelector('[data-msg]')
 
 
 
@@ -218,23 +218,23 @@ function consumo() {
                     const containerClone = document.querySelector("[data-prod-clone]");
 
                     const novoProd = containerClone.cloneNode(true);
-                    
+
                     const carrinho = document.querySelector('[data-carrinho-produto]');
 
 
                     const soma = document.querySelector('[data-soma]');
                     const fimCart = document.querySelector('[data-fim-cart]');
-                    
 
 
-                   
+
+
 
                     novoProd.style.display = '';
-                   
+
 
                     const descItens = document.querySelector('[data-desc-itens]')
 
-                  
+
                     let quantCarInt = 0;
 
                     button.addEventListener('click', () => {
@@ -244,13 +244,13 @@ function consumo() {
 
 
                         const botMenos = novoProd.querySelector('[data-bot-menos]');
-                        const botMais = novoProd.querySelector('[data-bot-mais]');  
+                        const botMais = novoProd.querySelector('[data-bot-mais]');
                         let contM = 0;
-                        
-                       
 
 
-                        if(conf == true) {
+
+
+                        if (conf == true) {
                             descItens.style.display = ''
                             msg.style.display = 'none';
                             soma.style.display = '';
@@ -259,7 +259,7 @@ function consumo() {
 
                             const categoria = novoProd.querySelector('[data-categoria]'); //1°
                             const nomeProd = novoProd.querySelector('[data-nome-prod]'); //2°
-                           
+
                             const valorUni = novoProd.querySelector('[data-valor-un]'); //4°
                             const dividido1 = novoProd.querySelector('[data-10x-1]'); //5°
                             const valorTot = novoProd.querySelector('[data-valor-tot]');//6°
@@ -309,22 +309,22 @@ function consumo() {
 
                             carrinho.appendChild(novoProd);
 
-                           
-                      
-                           
-                            
+
+
+
+
 
                         };
-                       
-                       
-                        
+
+
+
                     });
-                  
 
-                   
 
-                   
-                   
+
+
+
+
                     const bot_cont_cp = document.querySelector('[data-bot-cp]');  //continuar comprando
                     const bot_cont_cc = document.querySelector('[data-bot-cc]'); //concluir compra
 
@@ -333,7 +333,7 @@ function consumo() {
                         cont_p.style.display = '';
                         cart_mod.style.display = 'none';
                         table.style.display = '';
-                       
+
                     })
 
                     //função concluir compra
@@ -350,24 +350,24 @@ function consumo() {
 
                     let validador = true //validador para controle da visibilidade do carrinho.
 
-                  
+
                     ico_cart.addEventListener("click", () => {
-                          //abrir carrinho se validador for true
+                        //abrir carrinho se validador for true
                         if (validador == true) {
                             cont_p.style.display = 'none';
                             cart_mod.style.display = '';
                             table.style.display = 'none';
                             cont_p.style.display = 'none';
                             validador = false;
-                         
+
                         }   //fechar carrinho se validador for false
-                           else if(validador == false) {
+                        else if (validador == false) {
                             cont_p.style.display = '';
                             cart_mod.style.display = 'none';
                             table.style.display = '';
                             validador = true;
                         }
-                       
+
                     })
                 }
 
@@ -376,14 +376,14 @@ function consumo() {
                 criarCard();
                 pesquisar();
 
-               
+
 
 
 
             })
-          
 
-            const anima_Nav = () =>{
+
+            const anima_Nav = () => {
                 const nav = document.querySelector('[data-nav]')
                 const navFk = document.querySelector('[data-nav-fk]')
                 const logo1 = document.querySelector('[data-logo-1]')
@@ -391,7 +391,7 @@ function consumo() {
 
                     if (scrollY > 310) {
                         navFk.style.display = '';
-                       
+
                         nav.classList.add('anima');
                         nav.style.position = 'fixed';
                         nav.style.background = 'rgba(0, 0, 0, 0.1)';
@@ -399,7 +399,7 @@ function consumo() {
                         logo1.style.color = 'white';
                     } else {
                         logo1.style.color = 'rgb(153, 153, 153)';
-                        
+
                         nav.style.height = '70px';
                         navFk.style.display = 'none';
                         nav.classList.remove('anima');
@@ -409,7 +409,7 @@ function consumo() {
                     }
                 }
             }
-           anima_Nav();
+            anima_Nav();
 
 
 
@@ -417,7 +417,7 @@ function consumo() {
         }
 
 
-       
+
 
 
         listarProdutos();
