@@ -476,12 +476,228 @@ margin-left: 30px;
     color: white;
 }
 
+
+/*MODAL FORMULARIO E MENSAGEM DE SUCESSO*/
+.modal-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; 
+    width: 100vw;
+    height: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin-top: -200px;
+    z-index: 10000;
+    
+   
+}
+.modal-form  h5 {
+    color: rgb(167, 86, 243);
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+   
+}
+.forms {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -200px;
+    flex-wrap: wrap;
+}
+.cont-form-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 375px;
+    
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+.input-1, .input-2 {
+    outline: 0;
+    width: 340px;
+    height: 50px;
+}
+.input-1-1 {
+    width: 164px;
+    height: 50px;
+    outline: 0;
+}
+.sec-form-1, .sec-form2-1, .sec-form2-2, .sec-form2-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+   
+    background: none;
+    border: none;
+     border-bottom: 2px solid rgb(167, 86, 243) ;
+     border-radius: 5px;
+     text-indent: 10px;
+     color: white;
+     
+     
+    
+}
+input::placeholder {
+    color: rgb(228, 218, 218);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+input:hover {
+     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.input-end {
+ width: 235px;
+ height: 50px;
+ outline: 0;
+}
+.input-num {
+    outline: 0;
+    width: 85px;
+    height: 50px;
+}
+.input-2-c {
+    outline: 0;
+    width: 150px;
+    height: 50px;
+}
+.input-2-cc {
+    outline: 0;
+    width: 170px;
+    height: 50px;
+}
+#concluir-compra {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    background: rgb(166, 67, 253);
+}
+#concluir-compra:hover {
+ background: yellowgreen;
+ color: black;
+}
+
+
+.cont-form-2 {
+   display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 350px;
+    
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+
+/*modal sucess*/
+
+.cont-sucess {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 15000;
+    background: rgba(0, 0, 0, 0.4);
+}
+.cont-msg-sucess {
+    border-radius: 10px;
+    position: relative;
+    width: 340px;
+    height: 450px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    color: rgba(97, 99, 102, 0.6);
+    
+
+}
+.cont-msg-sucess h2 {
+    font-size: 18px;
+}
+.cont-msg-sucess img {
+    width: 100px;
+}
+.fecha-mod {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 290px;
+    width: 50px;
+    height: 50px;
+    top:0;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-family: serif;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+    color: rgba(97, 99, 102, 0.6);
+    
+   
+}
+.fecha-mod:hover {
+    color: white;
+     background:rgb(205, 168, 243);
+     box-shadow: 0px 10px 10px rgba(118, 120, 122, 0.5);
+}
+.bot-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: rgb(124, 36, 206);
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.bot-back img {
+    width: 40px;
+}
+.bot-back:hover {
+    background:rgb(205, 168, 243);
+   box-shadow: 10px 10px 10px rgba(118, 120, 122, 0.5);
+   color: white;
+}
+
+
 }
 
 
 
 
-
+ 
 
 
 @media screen and (min-width: 1001px) {
@@ -973,5 +1189,200 @@ font-size: 10px;
      background: blueviolet;
     color: white;
 }
+
+
+
+
+/* MODAL FORMULARIO E MENSAGEM DE SUCESSO */
+.modal-form {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; 
+    width: 100vw;
+    height: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin-top: -300px;
+    z-index: 10000;
+    
+   
+}
+.modal-form  h5 {
+    color: rgb(167, 86, 243);
+    text-align: center;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+   
+}
+.forms {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -200px;
+    flex-wrap: wrap;
+}
+.cont-form-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 600px;
+    
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+.input-1, .input-2 {
+    outline: 0;
+    width: 600px;
+    height: 50px;
+}
+.input-1-1 {
+    width: 290px;
+    height: 50px;
+    outline: 0;
+}
+.sec-form-1, .sec-form2-1, .sec-form2-2, .sec-form2-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+   
+    background: none;
+    border: none;
+     border-bottom: 2px solid rgb(167, 86, 243) ;
+     border-radius: 5px;
+     text-indent: 10px;
+     color: white;
+     
+     
+    
+}
+input::placeholder {
+    color: rgb(228, 218, 218);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+input:hover {
+     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.input-end {
+ width: 420px;
+ height: 50px;
+ outline: 0;
+}
+.input-num {
+    outline: 0;
+    width: 150px;
+    height: 50px;
+}
+.input-2-c {
+    outline: 0;
+    width: 285px;
+    height: 50px;
+}
+.input-2-cc {
+    outline: 0;
+    width: 285px;
+    height: 50px;
+}
+#concluir-compra {
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+
+.cont-form-2 {
+   display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 600px;
+    
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.cont-sucess {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 15000;
+    background: rgba(0, 0, 0, 0.4);
+}
+.cont-msg-sucess {
+    border-radius: 10px;
+    position: relative;
+    width: 700px;
+    height: 350px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    color: rgba(97, 99, 102, 0.6);
+
+}
+.fecha-mod {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 650px;
+    width: 50px;
+    height: 50px;
+    top:0;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-family: serif;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+    color: rgba(97, 99, 102, 0.6);
+    
+   
+}
+.fecha-mod:hover {
+    color: white;
+     background:rgb(205, 168, 243);
+     box-shadow: 0px 10px 10px rgba(118, 120, 122, 0.5);
+}
+.bot-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: rgb(124, 36, 206);
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.bot-back:hover {
+    background:rgb(205, 168, 243);
+   box-shadow: 10px 10px 10px rgba(118, 120, 122, 0.5);
+   color: white;
+}
+
     
 }

@@ -1,5 +1,70 @@
 
 function consumo() {
+   
+    const ConcluirCadastro = () =>{
+        const API_CEP = () => {
+            const cep = document.querySelector('[data-cep]');
+
+
+            cep.addEventListener('focusout', () => {
+
+                const numero = document.querySelector('[data-numero]');
+                numero.focus();
+
+                const url = `https://viacep.com.br/ws/${cep.value}/json/`;
+
+                console.log(cep.value)
+                    / fetch(url).then(response => {
+                        return response.json();
+                    }).then(endereco => {
+
+                        const pesquisarCep = () => {
+                            const rua = document.querySelector('[data-rua]');
+                            const bairro = document.querySelector('[data-bairro]');
+                            const cidade = document.querySelector('[data-cidade]');
+                            const estado = document.querySelector('[data-estado]');
+                            rua.value = endereco.logradouro;
+                            bairro.value = endereco.bairro;
+                            cidade.value = endereco.localidade;
+                            estado.value = endereco.uf;
+
+                        }
+
+                        pesquisarCep();
+
+                    });
+
+
+            });
+
+        };
+        API_CEP();
+
+
+        //const botHome = document.querySelector('[]') 
+        let validador = false;
+        const form = document.querySelector('[data-form]')
+        form.addEventListener('submit', (e) => {
+            const cont_msg = document.querySelector('[ data-msg-mod]')
+            e.preventDefault();
+            if(validador == false) {
+                form.style.display = 'none'
+                
+                cont_msg.style.display = 'block';
+                validador = true;
+            }
+         
+
+            
+        })
+
+
+    }
+    ConcluirCadastro();
+    
+ 
+
+    
 
     fetch("https://raw.githubusercontent.com/owInteractive/desafio-frontend-2020/master/produtos.json").then(response => {
 
@@ -9,6 +74,8 @@ function consumo() {
         let index;
      
         let contador_cart = document.querySelector('[data-contador-cart]');
+
+       
         const listarProdutos = () => {
            
             let quantCar = 0;
@@ -148,6 +215,9 @@ function consumo() {
 
 
                     //REPLICAR PRODUTOS NO CARRINHO
+                    const containerClone = document.querySelector("[data-prod-clone]");
+
+                    const novoProd = containerClone.cloneNode(true);
                     
                     const carrinho = document.querySelector('[data-carrinho-produto]');
 
@@ -157,9 +227,6 @@ function consumo() {
                     
 
 
-                    const containerClone = document.querySelector("[data-prod-clone]");
-
-                    const novoProd = containerClone.cloneNode(true);
                    
 
                     novoProd.style.display = '';
@@ -173,6 +240,16 @@ function consumo() {
                     button.addEventListener('click', () => {
                         let conf = confirm(`Deseja adicionar ${item.name} em seu carrinho?`)
 
+                        const contCart = novoProd.querySelector('[data-cont-cart-2]'); //3°
+
+
+                        const botMenos = novoProd.querySelector('[data-bot-menos]');
+                        const botMais = novoProd.querySelector('[data-bot-mais]');  
+                        let contM = 0;
+                        
+                       
+
+
                         if(conf == true) {
                             descItens.style.display = ''
                             msg.style.display = 'none';
@@ -182,7 +259,7 @@ function consumo() {
 
                             const categoria = novoProd.querySelector('[data-categoria]'); //1°
                             const nomeProd = novoProd.querySelector('[data-nome-prod]'); //2°
-                            const contCart = novoProd.querySelector('[data-cont-cart-2]'); //3°
+                           
                             const valorUni = novoProd.querySelector('[data-valor-un]'); //4°
                             const dividido1 = novoProd.querySelector('[data-10x-1]'); //5°
                             const valorTot = novoProd.querySelector('[data-valor-tot]');//6°
@@ -232,14 +309,26 @@ function consumo() {
 
                             carrinho.appendChild(novoProd);
 
+                           
+                      
+                           
+                            
 
-
-                        }
+                        };
                        
                        
-                    })
-                    const bot_cont_cp = document.querySelector('[data-bot-cp]');
+                        
+                    });
+                  
 
+                   
+
+                   
+                   
+                    const bot_cont_cp = document.querySelector('[data-bot-cp]');  //continuar comprando
+                    const bot_cont_cc = document.querySelector('[data-bot-cc]'); //concluir compra
+
+                    //função continuar comprando
                     bot_cont_cp.addEventListener('click', () => {
                         cont_p.style.display = '';
                         cart_mod.style.display = 'none';
@@ -247,12 +336,38 @@ function consumo() {
                        
                     })
 
-                    //abrir carrinho
+                    //função concluir compra
+                    bot_cont_cc.addEventListener('click', () => {
+                        console.log('cliquei')
+                        const carF = document.querySelector('[data-car-f]');
+                        const form = document.querySelector('[data-form]');
+                        carF.style.display = 'none';
+                        form.style.display = '';
+
+
+                    })
+
+
+                    let validador = true //validador para controle da visibilidade do carrinho.
+
+                  
                     ico_cart.addEventListener("click", () => {
-                        cont_p.style.display = 'none';
-                        cart_mod.style.display = '';
-                        table.style.display = 'none';
-                        cont_p.style.display = 'none';
+                          //abrir carrinho se validador for true
+                        if (validador == true) {
+                            cont_p.style.display = 'none';
+                            cart_mod.style.display = '';
+                            table.style.display = 'none';
+                            cont_p.style.display = 'none';
+                            validador = false;
+                         
+                        }   //fechar carrinho se validador for false
+                           else if(validador == false) {
+                            cont_p.style.display = '';
+                            cart_mod.style.display = 'none';
+                            table.style.display = '';
+                            validador = true;
+                        }
+                       
                     })
                 }
 
@@ -261,15 +376,12 @@ function consumo() {
                 criarCard();
                 pesquisar();
 
-            
+               
 
 
-            })
-            const botLixo = document.querySelector('[data-lixo]')
-            botLixo.addEventListener('click', () => {
-                alert('Deseja remover os itens?')
 
             })
+          
 
             const anima_Nav = () =>{
                 const nav = document.querySelector('[data-nav]')
@@ -279,15 +391,15 @@ function consumo() {
 
                     if (scrollY > 310) {
                         navFk.style.display = '';
-                        contador_cart.style.color = 'rgb(127, 255, 0)'
+                       
                         nav.classList.add('anima');
                         nav.style.position = 'fixed';
-                        nav.style.background = 'rgba(0, 0, 0, 0.4)';
+                        nav.style.background = 'rgba(0, 0, 0, 0.1)';
                         nav.style.height = '60px';
                         logo1.style.color = 'white';
                     } else {
                         logo1.style.color = 'rgb(153, 153, 153)';
-                        contador_cart.style.color = 'rgb(250, 35, 35)';
+                        
                         nav.style.height = '70px';
                         navFk.style.display = 'none';
                         nav.classList.remove('anima');
@@ -305,8 +417,7 @@ function consumo() {
         }
 
 
-
-
+       
 
 
         listarProdutos();
@@ -320,4 +431,4 @@ function consumo() {
 consumo()
 
 
-//bolNex.addEventListener('click', selection)
+
